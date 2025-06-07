@@ -1,4 +1,7 @@
-const socket = io();
+const socket = io({
+  transports: ['websocket'], // Force WebSocket for Render
+  upgrade: false
+});
 let map;
 const markers = {};
 
